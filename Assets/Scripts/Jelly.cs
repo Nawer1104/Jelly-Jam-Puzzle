@@ -14,7 +14,7 @@ public class Jelly : MonoBehaviour
         {
             if (collision.GetComponent<Point>().GetJelly() != null) return;
             PlayVfx();
-            collision.GetComponent<Point>().SetJelly(this)
+            collision.GetComponent<Point>().SetJelly(this);
             GameManager.Instance.levels[GameManager.Instance.GetCurrentIndex()].CheckJelly();
         }
     }
